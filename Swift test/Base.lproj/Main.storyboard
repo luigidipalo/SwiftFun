@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,24 +24,53 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9i-39-jDM">
-                                <rect key="frame" x="164.5" y="354" width="45" height="30"/>
+                                <rect key="frame" x="165" y="354" width="45" height="30"/>
                                 <state key="normal" title="Hit Me"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFh-QH-API"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vwz-UB-zNS">
+                                <rect key="frame" x="137.5" y="275" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Mgb-cs-q1x"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-nb-mFE">
+                                <rect key="frame" x="137.5" y="233" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Kzx-bd-lhJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2EK-PO-kRD">
+                                <rect key="frame" x="163" y="176" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="h0I-BY-w9P" firstAttribute="top" secondItem="Vwz-UB-zNS" secondAttribute="bottom" constant="18" id="2BT-LS-Qbc"/>
                             <constraint firstItem="y9i-39-jDM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AhJ-44-OxK"/>
+                            <constraint firstItem="h0I-BY-w9P" firstAttribute="top" secondItem="LFR-nb-mFE" secondAttribute="bottom" constant="60" id="Vce-L2-KLZ"/>
+                            <constraint firstItem="LFR-nb-mFE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bsD-b5-KOt"/>
+                            <constraint firstItem="LFR-nb-mFE" firstAttribute="top" secondItem="2EK-PO-kRD" secondAttribute="bottom" constant="26" id="dBM-NZ-YXK"/>
                             <constraint firstItem="h0I-BY-w9P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="im7-YL-WbS"/>
                             <constraint firstItem="y9i-39-jDM" firstAttribute="top" secondItem="h0I-BY-w9P" secondAttribute="bottom" constant="10" id="rlV-mq-Tps"/>
+                            <constraint firstItem="Vwz-UB-zNS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svg-kO-icM"/>
                             <constraint firstItem="h0I-BY-w9P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tB4-nH-Nqx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="2EK-PO-kRD" id="bU6-dT-EU7"/>
+                        <outlet property="bottomTextField" destination="Vwz-UB-zNS" id="vJd-pr-7pj"/>
                         <outlet property="myLabel" destination="h0I-BY-w9P" id="ifk-S3-W7r"/>
+                        <outlet property="topTextField" destination="LFR-nb-mFE" id="WHF-xw-42q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
